@@ -251,10 +251,19 @@ m.output_image("maze.png", show_explored=True)
 
 ## Greedy Best-First Search
 ### A* Search   
+![image](https://github.com/woxiangyaomooney/CS50-s-Introduction-to-Artificial-Intelligence-with-Python/assets/134345191/94d56378-2044-451e-b7ae-f027e88d11a3)   
+optimal if
+- h(n) is admissible (never overestimates the
+true cost), and
+- h(n) is consistent (for every node n and
+successor n' with step cost c, h(n) ≤ h(n') + c)
+
 ## Adversarial Search
 ### Minimax 
 两个选手，一个为了使值更高，一个为了使值更低   
-计算所有情况，从下到上赋值   
+计算所有情况，从下到上赋值 
+![image](https://github.com/woxiangyaomooney/CS50-s-Introduction-to-Artificial-Intelligence-with-Python/assets/134345191/182d4188-c682-4abb-b023-852589f5dc3c)
+
 Representing a Tic-Tac-Toe AI:
 
 S₀: Initial state (in our case, an empty 3X3 board)
@@ -264,7 +273,9 @@ S₀: Initial state (in our case, an empty 3X3 board)
 - Terminal(s): a function that, given a state s, checks whether this is the last step in the game, i.e. if someone won or there is a tie. Returns True if the game has ended, False otherwise.
 - Utility(s): a function that, given a terminal state s, returns the utility value of the state: -1, 0, or 1.
 
-![image](https://github.com/woxiangyaomooney/CS50-s-Introduction-to-Artificial-Intelligence-with-Python/assets/134345191/428e0cad-c10e-418d-813a-f5619d39578e)
+![image](https://github.com/woxiangyaomooney/CS50-s-Introduction-to-Artificial-Intelligence-with-Python/assets/134345191/428e0cad-c10e-418d-813a-f5619d39578e)   
+![image](https://github.com/woxiangyaomooney/CS50-s-Introduction-to-Artificial-Intelligence-with-Python/assets/134345191/9b03b5ad-8264-4fe7-b919-a7f868c02859)
+![image](https://github.com/woxiangyaomooney/CS50-s-Introduction-to-Artificial-Intelligence-with-Python/assets/134345191/5d050118-145f-4ab6-bfec-f85189a55cb1)
 
 ### Alpha-Beta Pruning
 ![image](https://github.com/woxiangyaomooney/CS50-s-Introduction-to-Artificial-Intelligence-with-Python/assets/134345191/0be886c8-4ec5-48ac-82aa-79c12ed882b9)
