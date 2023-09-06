@@ -1,6 +1,7 @@
 ## Search   
 - BFS   
-- DFS  
+- DFS
+Breadth-first and depth-first are both **uninformed search algorithms**. 
 python实现方式：   
 Repeat:    
 1. If the frontier is empty,    
@@ -250,6 +251,9 @@ m.output_image("maze.png", show_explored=True)
 ```
 
 ## Greedy Best-First Search
+Greedy best-first search expands the node that is the closest to the goal, as determined by a **heuristic function h(n)**启发式算法. As its name suggests, the function estimates how close to the goal the next node is, but it can be mistaken. The efficiency of the greedy best-first algorithm depends on how good the heuristic function is. For example, in a maze, an algorithm can use a heuristic function that relies on **the Manhattan distance** between the possible nodes and the end of the maze. The Manhattan distance ignores walls and counts how many steps up, down, or to the sides it would take to get from one location to the goal location. This is an easy estimation that can be derived based on the (x, y) coordinates of the current location and the goal location.
+![Manhattan distance](https://github.com/woxiangyaomooney/CS50-s-Introduction-to-Artificial-Intelligence-with-Python/assets/134345191/3068ae73-fa3d-4756-8ef0-b32268392011)
+
 ### A* Search   
 ![image](https://github.com/woxiangyaomooney/CS50-s-Introduction-to-Artificial-Intelligence-with-Python/assets/134345191/94d56378-2044-451e-b7ae-f027e88d11a3)   
 optimal if
@@ -259,6 +263,7 @@ true cost), and
 successor n' with step cost c, h(n) ≤ h(n') + c)
 
 ## Adversarial Search
+ In adversarial search the algorithm faces an opponent that tries to achieve the opposite goal. 
 ### Minimax 
 两个选手，一个为了使值更高，一个为了使值更低   
 计算所有情况，从下到上赋值 
@@ -281,3 +286,5 @@ S₀: Initial state (in our case, an empty 3X3 board)
 ![image](https://github.com/woxiangyaomooney/CS50-s-Introduction-to-Artificial-Intelligence-with-Python/assets/134345191/0be886c8-4ec5-48ac-82aa-79c12ed882b9)
 
 ### Depth-Limited Minimax
+Depth-limited Minimax considers only a pre-defined number of moves before it stops, **without ever getting to a terminal state**. However, this doesn’t allow for getting a precise value for each action, since the end of the hypothetical games has not been reached. To deal with this problem, Depth-limited Minimax relies on an evaluation function that estimates the expected utility of the game from a given state, or, in other words, assigns values to states.
+例如Minimax 赋值-1,0,1；Depth-Limited Minimax可以给状态赋值为0.8。
