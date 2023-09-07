@@ -1,3 +1,4 @@
+#第一次做这种题，非常不熟练，借鉴了一位大佬的：[github:PKUFlyingPig](https://github.com/PKUFlyingPig/cs50_ai/blob/master/lab/degrees/degrees.py)
 import csv
 import sys
 
@@ -169,4 +170,3 @@ def neighbors_for_person(person_id):
 
 if __name__ == "__main__":
     main()
-#第一次做这种题，非常不熟练，借鉴了一位大佬的：[github:PKUFlyingPig](https://github.com/PKUFlyingPig/cs50_ai/blob/master/lab/degrees/degrees.py)
